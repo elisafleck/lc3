@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script type="text/javascript" src="js/primeiroCod.js"></script>
+    <script type="text/javascript" src="js/calculos.js"></script>
+    <script type="text/javascript" src="js/cadastro.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+   
+    <!-- bloco para comparar números -->
+    <div
+        class="p-3 my-3 text-center container-sm text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        Modularização de Scripts</div>
+    <!-- bloco para comparar números -->
+    <div class="container border bg-subtle rounded" id="compare">
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Número</label>
+            <div class="col-sm-10">
+                <input type="number" id="num">
+            </div>
+        </div>
+        <input type="button" class="btn btn-primary btn-outline-dark" value="compare"
+            onclick="compare(document.getElementById('num').value);">
+    </div>
+    <!-- Bloco efetua cálculos -->
+    <div class="my-3  container border bg-subtle rounded" id="calculos">
+        <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-4 col-form-label">Informe o primeiro número:</label>
+            <div class="col-sm-10">
+                <input type="number" id="num1">
+            </div>
+            <label for="staticEmail" class="col-sm-4 col-form-label">Informe o segundo número:</label>
+            <div class="col-sm-10"> <input type="number" id="num2">
+                <input type="button" class="btn btn-outline-success" value="calculos"
+                    onclick="document.getElementById('calculo').innerHTML = calculo(document.getElementById('num1').value,document.getElementById('num2').value)">
+            </div>
+            <p id="calculo">
+
+            </p>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+        </div>
+    </div>
+    <div class="my-3  container border bg-subtle rounded" id="cadastro">
+        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Nome:</label>
+        <div class="col-sm-10">
+            <input type="text" id="nome">
+        </div>
+        <label for="staticEmail" class="col-sm-4 col-form-label">Informe um Telefone:</label>
+        <div class="col-sm-10">
+            <input type="number" id="telefone">
+        </div>
+        <div class="col-sm-10 p-2">
+            <input type="button" class="btn btn-outline-success" value="Cadastrar" onclick="cad(document.getElementById('nome').value,document.getElementById('telefone').value)">
+        </div>
+        <div class="col-sm-10 p-2" id="mostrarArray">
+            <input type="button" class="btn btn-outline-success" value="Mostrar Cadastros" onclick="escreveHTML()">
+        </div>
+        <div id="mostrarCadastro"></div>
+    </div>
+
+</body>
+
+
+</html>
